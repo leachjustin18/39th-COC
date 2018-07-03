@@ -15,6 +15,24 @@ module.exports = {
       icon: "src/images/icon.png", // This path is relative to the root of the site.
     },
   },
-  `gatsby-plugin-offline`
+  `gatsby-plugin-offline`,
+  {
+    resolve: `gatsby-plugin-favicon`,
+    options: {
+      logo: "./src/favicon.png",
+      injectHTML: true,
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        twitter: false,
+        yandex: false,
+        windows: false
+      }
+    }
+  }
 ],
 }
