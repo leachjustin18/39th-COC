@@ -1,0 +1,38 @@
+{
+    "name": "39th-cofc",
+    "version": "0.0.0",
+    "description": "39th St Church of Christ website.  ",
+    "main": "gatsby-browser.js",
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "format": "prettier --write src/**/*.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/leachjustin18/39th-COFC.git"
+    },
+    "keywords": [
+        "39th",
+        "COC"
+    ],
+    "author": "Justin Leach",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/leachjustin18/39th-COFC/issues"
+    },
+    "homepage": "https://github.com/leachjustin18/39th-COFC#readme",
+    "dependencies": {
+        "gatsby": "^1.9.273",
+        "gatsby-link": "^1.6.45",
+        "gatsby-plugin-favicon": "^2.1.1",
+        "gatsby-plugin-manifest": "^1.0.27",
+        "gatsby-plugin-offline": "^1.0.18",
+        "gatsby-plugin-react-helmet": "^2.0.11",
+        "gatsby-source-prismic": "^1.0.2",
+        "react-helmet": "^5.2.0"
+    },
+    "devDependencies": {
+        "prettier": "^1.13.6"
+    }
+}
