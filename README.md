@@ -1,8 +1,8 @@
 # 39 St Church of Christ
-Web application for 39th St COC built on the JAM stack. 
+Web application for 39th St COFC built on the JAM stack. 
 
-## Build
-
-npm install
-npm run develop
+## Run
+* Download repo
+* npm install
+* npm run develop
 
