@@ -34,6 +34,12 @@ module.exports = {
         windows: false
       }
     }
+  },
+  {
+    resolve: `gatsby-plugin-typography`,
+    options: {
+      pathToConfigModule: `src/services/typography`,
+    },
   }
 ],
 }

@@ -6,9 +6,12 @@ import green from '@material-ui/core/colors/green';
 // A theme with custom primary and secondary color.
 // It's optional.
 const theme = createMuiTheme({
-  palette: {
-
-  },
+  typography: {
+    // Use the system font instead of the default Roboto font.
+    fontFamily: [
+      'Montserrat'
+    ]
+  }
 });
 
 function createPageContext() {
