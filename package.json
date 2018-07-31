@@ -6,7 +6,6 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.js",
     "precommit": "lint-staged"
   },
   "repository": {
