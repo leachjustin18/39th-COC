@@ -3,6 +3,7 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   plugins: ['gatsby-plugin-react-helmet',
+  `gatsby-plugin-react-next`,
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
@@ -33,6 +34,12 @@ module.exports = {
         windows: false
       }
     }
+  },
+  {
+    resolve: `gatsby-plugin-typography`,
+    options: {
+      pathToConfigModule: `src/services/typography`,
+    },
   }
 ],
 }
