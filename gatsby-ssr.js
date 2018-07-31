@@ -1,5 +1,4 @@
 /* eslint-disable react/no-danger */
-
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { JssProvider } from 'react-jss';
