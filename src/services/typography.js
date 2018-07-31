@@ -1,17 +1,12 @@
 import Typography from 'typography';
 
 const typography = new Typography({
-    googleFonts: [
-        {
-          name: 'Montserrat',
-          styles: [
-              '300',
-              '400',
-              '500',
-              '600',
-          ],
-        },
-    ],
+  googleFonts: [
+    {
+      name: 'Montserrat',
+      styles: ['300', '400', '500', '600'],
+    },
+  ],
   baseFontSize: '18px',
   baseLineHeight: 1.45,
   headerFontFamily: ['Montserrat'],
@@ -19,14 +14,14 @@ const typography = new Typography({
   headerWeight: 600,
   overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
     html: {
-      overflowY: 'auto'
+      overflowY: 'auto',
     },
     body: {
-        fontWeight: 400
-    }
-  })
+      fontWeight: 400,
+    },
+  }),
 });
 
-typography.injectStyles()
+typography.injectStyles();
 
 export default typography;
