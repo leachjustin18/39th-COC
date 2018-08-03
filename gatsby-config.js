@@ -1,3 +1,6 @@
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
@@ -56,6 +59,23 @@ module.exports = {
         // The token will be listed under "Permanent access tokens".
         accessToken:
           'MC5XMk92S0I0QUFOaUFlSll6.77-9TO-_vQrvv73vv71o77-9Ce-_vWFv77-9FjDvv73vv70UHe-_vU7vv70C77-9VSbvv73vv73vv70077-9Qg',
+      },
+    },
+    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss-sass`,
+      options: {
+        postCssPlugins: [autoprefixer({ grid: true }), cssnano()],
+        precision: 8, // SASS default: 5
       },
     },
   ],
