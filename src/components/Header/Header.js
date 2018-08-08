@@ -37,7 +37,7 @@ class Header extends React.PureComponent {
                 <MenuIcon className={classes.menuIcon} />
               </IconButton>
               <Typography className={classes.menuText} variant="caption">
-                Menu
+                {headerContent.mobile_menu_title.text}
               </Typography>
             </div>
 

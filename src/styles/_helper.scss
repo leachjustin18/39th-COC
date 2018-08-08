@@ -1,0 +1,32 @@
+.center-content {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.display-grid {
+    display: grid;
+}
+
+.justify-items-center {
+    justify-items: center
+}
+
+.text-center {
+    text-align: center;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.content-separator {
+    margin: 0 3px;
+}
+
+.content-separator:before {
+    content: "|";
+}
+
+.full-width {
+    width: 100%;
+}

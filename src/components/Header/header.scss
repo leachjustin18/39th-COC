@@ -1,15 +1,27 @@
+@import "../../styles/toolkit";
 .header__link {
     text-decoration: none;
     color: white;
-    max-width: 12rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .header__menuContainer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     margin-left: -.5rem;
     margin-right: 1.5rem;
     color: white;
     cursor: pointer;
+}
+
+@include breakpoint('lg') {
+    .header__menuContainer {
+        display: none;
+    }
+    .header__link {
+        max-width: 12rem;
+    }
 }

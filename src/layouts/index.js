@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Header from '../components/Header';
 import getPrismicSingleton from '../services/prismic/getSingleton';
+import '../styles/root.scss';
 class Layout extends React.PureComponent {
   render() {
     const { children, data } = this.props;
@@ -46,7 +47,9 @@ export const query = graphql`
         node {
           data {
             title {
-              html
+              text
+            }
+            mobile_menu_title {
               text
             }
           }
