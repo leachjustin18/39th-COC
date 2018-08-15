@@ -16,6 +16,10 @@ const styles = {
     height: 25,
     display: 'flex',
     alignSelf: 'center',
+    '&:hover': {
+      //you want this to be the same as the backgroundColor above
+      backgroundColor: 'transparent',
+    },
   },
   menuText: {
     color: 'white',
@@ -33,7 +37,11 @@ class Header extends React.PureComponent {
         <AppBar position="static">
           <Toolbar>
             <div className="header__menuContainer">
-              <IconButton className={classes.menuButton} aria-label="Menu">
+              <IconButton
+                className={classes.menuButton}
+                aria-label="Menu"
+                disableTouchRipple={true}
+              >
                 <MenuIcon className={classes.menuIcon} />
               </IconButton>
               <Typography className={classes.menuText} variant="caption">
