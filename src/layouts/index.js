@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Header from '../components/header';
-
+import Header from '../components/Header';
+import getPrismicSingleton from '../services/prismic/getSingleton';
+import '../styles/root.scss';
 class Layout extends React.PureComponent {
   render() {
     const { children, data } = this.props;
+
+    const headerContent = getPrismicSingleton(data.header);
+
     return (
       <div>
         <Helmet
@@ -15,7 +19,8 @@ class Layout extends React.PureComponent {
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        <Header siteTitle={data.site.siteMetadata.title} />
+
+        <Header headerContent={headerContent} />
 
         <div>{children()}</div>
       </div>
@@ -34,6 +39,21 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+
+    header: allPrismicHeader {
+      edges {
+        node {
+          data {
+            title {
+              text
+            }
+            mobile_menu_title {
+              text
+            }
+          }
+        }
       }
     }
   }

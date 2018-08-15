@@ -1,0 +1,38 @@
+// Breakpoints
+// -------------------------------------------------------
+// example: @include breakpoint(sm) { style }
+@mixin breakpoint($class) {
+    @if $class==sm {
+        @media only screen and (min-width: $break-mobile) {
+            @content;
+        }
+    }
+    @else if $class==md {
+        @media only screen and (min-width: $break-tablet) {
+            @content;
+        }
+    }
+    @else if $class=lg {
+        @media only screen and (min-width: $break-desktop) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Breakpoint mixin supports: sm, md, or lg";
+    }
+}
+
+// Alternate mixin where you can pass specific values
+// example: @include bp-min(480px) { style }
+@mixin bp-min($value) {
+    @media only screen and (min-width: $value) {
+        @content;
+    }
+}
+
+// example: @include bp-max(480px) { style }
+@mixin bp-max($value) {
+    @media only screen and (max-width: $value) {
+        @content;
+    }
+}
