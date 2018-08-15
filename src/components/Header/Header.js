@@ -17,7 +17,6 @@ const styles = {
     display: 'flex',
     alignSelf: 'center',
     '&:hover': {
-      //you want this to be the same as the backgroundColor above
       backgroundColor: 'transparent',
     },
   },
